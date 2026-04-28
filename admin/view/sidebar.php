@@ -84,7 +84,25 @@
               <span class="menu-title">Add Categories</span>
             </a>
           </li>
+
           <a class="nav-link"  href="addProduct.php" aria-expanded="false" aria-controls="ui-basic">
+          <li class="nav-item menu-items">
+              <span class="menu-icon">
+                <i class="mdi mdi-laptop"></i>
+              </span>
+              <span class="menu-title">Add Products</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <a class="nav-link"  href="#" aria-expanded="false" aria-controls="ui-basic">
           <li class="nav-item menu-items">
               <span class="menu-icon">
                 <i class="mdi mdi-laptop"></i>
