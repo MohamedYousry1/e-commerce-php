@@ -9,8 +9,8 @@ if (isset($_POST['addProduct'])) {
     $quantity    = trim(htmlspecialchars($_POST['quantity']));
 
     $img = $_FILES['img'];
-    $imgName = $_FILES['name'];
-    $tmpName = $_FILES['tmp_name'];
+    $imgName = $img['name'];
+    $tmpName = $img['tmp_name'];
     $ext = pathinfo($imgName, PATHINFO_EXTENSION);
     $extenstions = ['jpeg', 'jpg', 'png'];
     $imgNewName = uniqid() . "." . $ext;
@@ -42,7 +42,7 @@ if (isset($_POST['addProduct'])) {
     }
 
     // Store
-    $_SESSION['product'][] = [
+    $_SESSION['productS'][] = [
         "category"    => $category,
         "title"       => $title,
         "description" => $description,
@@ -50,7 +50,7 @@ if (isset($_POST['addProduct'])) {
         "quantity"    => $quantity,
         "imgNewName"  => $imgNewName
     ];
-    
+
     // Upload Img
     move_uploaded_file($tmpName, "../upload/" . $imgNewName);
 
