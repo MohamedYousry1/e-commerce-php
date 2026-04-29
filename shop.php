@@ -22,262 +22,28 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] == false) {
     <h2>Featured Products</h2>
     <p>Summer Collection New Modren Desgin</p>
     <div class="pro-container">
-        <div class="pro" onclick="window.location.href='product.html'">
-            <img src=" img/products/f1.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
+        <?php if(isset($_SESSION['productS'])): ?>
+            <?php foreach ($_SESSION['productS'] as $product): ?>
+                <div class="pro" onclick="window.location.href='product.php'">
+                    <img src="admin/upload/<?= $product['imgNewName'];?>" alt="p1 ">
+                    <div class="des ">
+                        <span><?= $product['category'];?></span>
+                        <h5><?= $product['title'];?></h5>
+                        <div class="star ">
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                            <i class="fas fa-star "></i>
+                        </div>
+                        <h4>Price: <?= $product['price'];?> LE</h4>
+                        <h6>Quantity: <?= $product['quantity'];?></h6>
+                        <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
+                    </div>
                 </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/f2.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/f3.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/f4.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/f5.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/f6.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/f7.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/f8.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/n1.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/n2.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/n3.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/n4.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/n5.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/n6.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/n7.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
-        <div class="pro ">
-            <img src="img/products/n8.jpg " alt="p1 ">
-            <div class="des ">
-                <span>adidas</span>
-                <h5>Cartoon Astronaut T-Shirt</h5>
-                <div class="star ">
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                    <i class="fas fa-star "></i>
-                </div>
-                <h4>78</h4>
-                <a href="# " class="cart "><i class="fas fa-shopping-cart "></i></a>
-            </div>
-        </div>
+        <?php
+            endforeach;
+        endif; ?>
     </div>
 </section>
 
