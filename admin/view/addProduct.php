@@ -1,7 +1,5 @@
 <?php
-
 include "../view/header.php";
-
 include "../view/sidebar.php";
 include "../view/navbar.php";
 
@@ -14,10 +12,12 @@ include "../view/navbar.php";
 
               <div class="card-body px-5 py-5">
                 <h3 class="card-title text-left mb-3">Add Product</h3>
-                <form method="POST" action="addProduct.php" enctype="multipart/form-data">
+                <?php require_once('../../inc/errors.php'); ?>
+                <?php require_once('../../inc/success.php'); ?>
+                <form method="POST" action="../handle/addProduct.php" enctype="multipart/form-data">
                   <div class="form-group">
                     <label>Category</label>
-                    <input type="text" name="cat" class="form-control p_input">
+                    <input type="text" name="category" class="form-control p_input">
                   </div>
                   <div class="form-group">
                     <label>Title</label>
@@ -25,7 +25,7 @@ include "../view/navbar.php";
                   </div>
                   <div class="form-group">
                     <label>Description</label>
-                    <input type="text" name="desc" class="form-control p_input">
+                    <input type="text" name="description" class="form-control p_input">
                   </div>
                   <div class="form-group">
                     <label>Price</label>
